@@ -27,7 +27,7 @@ dependencies = [
     "Keras-Preprocessing==1.1.2",
     "kiwisolver==1.0.1",
     "Markdown==3.1.1",
-    "matplotlib==3.7.5",
+    "matplotlib>=3.7.5",
     "networkx==3.1",
     "numpy>=1.24.3",
     "ordered-set==4.1.0",
@@ -95,7 +95,7 @@ thirdparty = "thirdparty"
 
 
 [project.urls]
-Repository = "https://github.com/luigifreda/pyslam"
+Repository = "https://github.com/CyberCastle/pyslam"
 
 
 [tool.black]
