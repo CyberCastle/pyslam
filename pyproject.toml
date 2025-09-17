@@ -7,7 +7,7 @@ authors = [
 maintainers = [
   {name = "Luigi Freda", email = "luigifreda@gmail.com"},
 ]
-description = "pySLAM is a Python-based Visual SLAM pipeline that supports monocular, stereo, and RGB-D cameras. It offers a wide range of modern local and global features, multiple loop-closing strategies, a volumetric reconstruction pipeline, integration of depth prediction models, and semantic segmentation for enhanced scene understanding."
+description = "pySLAM is a Python-based Visual SLAM pipeline that supports monocular, stereo, and RGB-D cameras. It offers a wide range of modern local and global features, multiple loop-closing strategies, and visualization tools."
 readme = "README.md"
 requires-python = ">=3.11.9"
 dependencies = [
@@ -25,9 +25,9 @@ dependencies = [
     "kornia_moons==0.2.9",
     "Keras-Applications==1.0.8",
     "Keras-Preprocessing==1.1.2",
-    "kiwisolver==1.0.1",
+    "kiwisolver>=1.3.1",
     "Markdown==3.1.1",
-    "matplotlib>=3.7.5",
+    "matplotlib>=3.11.0",
     "networkx==3.1",
     "numpy>=1.24.3",
     "ordered-set==4.1.0",
@@ -93,19 +93,13 @@ packages = ["pyslam", "thirdparty"]
 pyslam = "pyslam"
 thirdparty = "thirdparty"
 
-
 [project.urls]
 Repository = "https://github.com/CyberCastle/pyslam"
 
-
 [tool.black]
-line-length = 100           # default 88; 100 or 120 are common in industry
+line-length = 100
 target-version = ['py311']
-
-# only format .py / .pyi files
 include = '\.pyi?$'
-
-# exclude dirs (regex; Black uses re.VERBOSE so whitespace/comments are OK)
 exclude = '''
 /(
     \.git
